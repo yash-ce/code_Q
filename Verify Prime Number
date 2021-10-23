@@ -1,0 +1,32 @@
+
+/*
+ * Complete the function 'verifyPrime'
+ * @params
+ *  n ->number which is to be checked from primality test
+ *
+ * @return
+ *   true if the number is a prime number else false
+ */
+static boolean verifyPrime(int n)
+{
+  long  c = 0;
+  if(n == 0 || n == 1){
+    return false;
+  }
+  if(n == 2){
+    return true;
+  }
+  
+  for(int i=2;i<n;i++){
+    if(n%i == 0){
+      c = 1;
+    }
+  }
+  if(c == 1){
+    return false;
+  }
+  else{
+    return true;
+  }
+  
+}
