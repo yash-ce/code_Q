@@ -1,0 +1,11 @@
+/*
+ * Complete the function 'addDigitByDigit'
+ * @params
+ *   a,b,c => numbers which are to be added
+ * @return
+ *  sum of the three numbers added digit by digit
+ */
+
+int addDigitByDigit(int a,int b,int c){
+  // Write your code here
+}
