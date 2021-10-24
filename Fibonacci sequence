@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+// Include headers as needed
+using namespace std;
+void fibo(long long int );
+int main()
+{
+    // Write your code here
+	long long int n;
+  	cin>>n;
+    if(n == 1){
+      cout<<0<<endl;
+      return 0;
+    }
+    long long int n1 = 0, n2 = 1, n3, i, number;
+  	cout<<n1<<endl<<n2<<endl;
+  	for(long long int i = 2;i<n;++i){
+      n3 = n1+n2;
+      cout<<n3<<endl;
+      n1 = n2;
+      n2 = n3;
+    }
+}
+void fibo(long long int n){
+}
