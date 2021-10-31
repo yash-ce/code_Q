@@ -1,0 +1,23 @@
+#include <string.h>
+// Return true if the string is palindrome, else return false
+bool isPalindrome(string str){
+  // Write your code here
+  int n = str.size();
+  bool flag = true;
+  int i =0;
+  for(i=0;i<n/2;i++){
+    //cout<<str[i]<<" -> "<<str[n-1-i]<<endl;
+    if(str[i] != str[n-1-i]){
+      flag = false;
+      break;
+    }
+   }
+  
+  if(i == n/2){
+    return flag;
+  }
+  else{
+    return flag;
+  }
+  
+}
