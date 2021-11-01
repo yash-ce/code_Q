@@ -1,0 +1,33 @@
+/*
+ * Complete the function below with 1 argument: 
+ * An integer array of stick lengths (sticks)
+ *
+ * Return an array which denotes the number of sticks cut during ith operation 
+ */
+#include <bits/stdc++.h>
+
+vector<int> cutSticks(vector<int> a) {
+  // Write your code here
+  // accumulate(a.begin(), a.end(), 0);
+  vector<int> v;
+  while(accumulate(a.begin(), a.end(), 0) != 0){
+  int min = a[0];
+    int max = a[0];
+  for(int i=0;i<a.size();i++){
+    if(v[i] < min){
+      min = v[i];
+    }
+  }
+    for(int i=0;i<a.size();i++){
+    	v[i] = v[i]-min;
+  }
+    for(int i=0;i<a.size();i++){
+    	if(a[i] > max){
+          max = a[i];
+        }
+  }
+    v.push_back(max);
+  }
+  
+  return v;
+}
