@@ -4,6 +4,12 @@
  *
  * Return an array which denotes the number of sticks cut during ith operation 
  */
+/*
+ * Complete the function below with 1 argument: 
+ * An integer array of stick lengths (sticks)
+ *
+ * Return an array which denotes the number of sticks cut during ith operation 
+ */
 # include <bits/stdc++.h>
 vector<int> cutSticks(vector<int> a) {
   // Write your code here
