@@ -1,0 +1,5 @@
+def countWords(string):
+  c = 0
+  for i in string.split():
+    c += 1
+  return c
