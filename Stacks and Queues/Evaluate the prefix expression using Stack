@@ -1,0 +1,44 @@
+/*
+int Stack[SIZE], top=-1;
+int isFull();
+int isEmpty();
+int push(int item);
+int pop();
+Above variables are used for Stack, SIZE and top and all are global variables. Also above push and pop functions are provided. */
+int power(int , int );
+int power(int base, int exponent)
+{
+int result=1;
+for (exponent; exponent>0; exponent--)
+{
+result = result * base;
+}
+return result;
+}
+int evalPrefix(char* exp)
+{
+  int i, op1, op2, answer;
+  int l = strlen(exp);
+  for (i = l-1; i>= 0; --i)
+  {
+    // If the scanned character is an operand (number here), push it to the stack.
+    if (isdigit(exp[i]))
+      push(exp[i] - '0');
+    // If the scanned character is an operator, pop two elements from stack apply the operator
+    else
+    {
+      op1 = pop();
+      op2 = pop();
+      switch (exp[i])
+      {
+        case '+': push(op1 + op2); break;
+        case '-': push(op1 - op2); break;
+        case '*': push(op1 * op2); break;
+        case '/': push(op1 / op2); break;
+        case '^': push(power(op1, op2)); break;
+      }
+    }
+  }
+  answer = pop();
+  return answer;
+}
