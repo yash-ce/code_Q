@@ -1,0 +1,36 @@
+/*     
+ * Complete the 'isPangrams' function below.
+ * @params
+ *  strings -> a vector of strings which is to be tested
+ *
+ * @return
+ *  A string consisting of '1' and '0' where each position represents the results of that test. 
+ *  Use a '1' to represent true, '0' for false.
+ */
+string isPangram(vector<string> &s){
+  // Write your code here
+  string res = "";
+  for(int i=0;i<s.size();i++){
+    string s1 = s[i];
+    int a[130];
+    for(int j=0;j<130;j++){
+      a[j] = 0;
+    }
+    for(int k=0;k<s[i].size();k++){
+      ++a[s1[k]];
+    }
+    int c = 0;
+    for(int l=0;l<130;l++){
+      if(a[l] > 0){
+        c++;
+      }
+    }
+    if(c > 26){
+      res += "1";
+    }
+    else{
+      res += "0";
+    }
+   }
+  return res;
+}
