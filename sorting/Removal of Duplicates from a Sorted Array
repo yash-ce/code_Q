@@ -1,0 +1,8 @@
+# Return the updated array
+def removeDuplicates(array,N):
+  # Write your code here
+  l= []
+  for i in array:
+    if i not in l:
+      l.append(i)
+  return l
